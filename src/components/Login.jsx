@@ -27,7 +27,7 @@ const Login = () => {
       if (response.ok) {
         const data = await response.json();
         sessionStorage.setItem("token", data.token);
-        dispatch(setUser(data.user)); // Redux 상태에 사용자 정보 저장
+        dispatch(setUser(data.user));
         navigate("/account");
       } else {
         setError("Login failed");
